@@ -16,7 +16,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Read{' '}
           <Link href="/posts/first-post">
-            <a>this page!</a>
+            <a>this page 测试!</a>
           </Link>
         </h1>
 
