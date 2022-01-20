@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Image from 'next/image'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -21,7 +22,18 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>搞程序的</p>
+        <p className={utilStyles.flexWarp}>搞程序的，GitHubへ :
+          <a href={`https://github.com/Akira-San`} className={utilStyles.spacer}> 
+            <Image
+                priority
+                src="/images/GitHub-Mark-120px-plus.png"
+                height={40}
+                width={40}
+                className={utilStyles.githubIcon}
+                alt="Github Link"
+            />
+          </a>
+        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
